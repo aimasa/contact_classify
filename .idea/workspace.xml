@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dffdc1a1-2ce4-4385-951a-d409a3da9988" name="Default Changelist" comment="1、添加对CNN分类训练的描述&#10;2、对读取文件信息做了容错处理" />
+    <list default="true" id="dffdc1a1-2ce4-4385-951a-d409a3da9988" name="Default Changelist" comment="1、添加对CNN分类训练的描述&#10;2、对读取文件信息做了容错处理">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,8 +30,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_script/test_classfiy.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-335">
-              <caret line="111" column="38" lean-forward="true" selection-start-line="111" selection-start-column="38" selection-end-line="111" selection-end-column="38" />
+            <state relative-caret-position="279">
+              <caret line="132" column="1" lean-forward="true" selection-start-line="132" selection-start-column="1" selection-end-line="132" selection-end-column="1" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -37,6 +40,24 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="70">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/contact_classify/train.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2454">
+              <caret line="20" column="44" lean-forward="true" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="100">
@@ -120,7 +141,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/deal_doc_head/process_data.py" />
         <option value="$PROJECT_DIR$/deal_doc_head/deal_doc.py" />
         <option value="$PROJECT_DIR$/deal_docx/check_utils.py" />
         <option value="$PROJECT_DIR$/utils.py" />
@@ -168,9 +188,10 @@
         <option value="$PROJECT_DIR$/contact_classify/train.py" />
         <option value="$PROJECT_DIR$/test_script/test.py" />
         <option value="$PROJECT_DIR$/contact_classify/evaluation.py" />
-        <option value="$PROJECT_DIR$/test_script/test_classfiy.py" />
         <option value="$PROJECT_DIR$/pro_data/eval_prodata.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/test_script/test_classfiy.py" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -471,7 +492,7 @@
       <workItem from="1597840104596" duration="10889000" />
       <workItem from="1600650799296" duration="745000" />
       <workItem from="1607340581333" duration="38000" />
-      <workItem from="1607340642429" duration="292000" />
+      <workItem from="1607340642429" duration="988000" />
     </task>
     <task id="LOCAL-00001" summary="1、添加对CNN分类训练的描述&#10;2、对读取文件信息做了容错处理">
       <created>1584520442931</created>
@@ -484,7 +505,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="620873000" />
+    <option name="totallyTimeSpent" value="621569000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -715,7 +736,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/script/deal_docx/replace_doc.py" />
     <entry file="file://$PROJECT_DIR$/script/txt_process/contact_label_and_content.py" />
     <entry file="file://$PROJECT_DIR$/script/txt_process/dic_word.txt" />
     <entry file="file://$PROJECT_DIR$/script/txt_process/split_content_and_label.py" />
@@ -923,13 +943,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/contact_classify/train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="20" column="44" lean-forward="true" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/cnn.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="109">
@@ -961,16 +974,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_script/test_classfiy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-335">
-          <caret line="111" column="38" lean-forward="true" selection-start-line="111" selection-start-column="38" selection-end-line="111" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/contact_classify/evaluation.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
@@ -995,6 +998,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_script/test_classfiy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="132" column="1" lean-forward="true" selection-start-line="132" selection-start-column="1" selection-end-line="132" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/contact_classify/train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2454">
+          <caret line="20" column="44" lean-forward="true" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
