@@ -1,6 +1,6 @@
 from utils import normal_util, check_utils
 import os
-from entity_contract import normal_param
+from entity_extraction import normal_param
 import re
 from tqdm import tqdm
 def read_txt(path):
