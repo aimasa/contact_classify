@@ -113,6 +113,7 @@ def classfiy(pros, texts_path, classfiy_path):
     files_path = normal_util.concat_file_path(classfiy_path, normal_util.get_all_path(classfiy_path))
     for index, pro in enumerate(pros.tolist()):
         normal_util.copy_replace(texts_path[index], files_path[pro])
+        
 
 @app.route('/contact/classify', methods = ["POST"])
 def classify():
