@@ -1,9 +1,10 @@
 import shutil
 import os
 import datetime
+import random
 from utils import check_utils
 import re
-
+import pickle
 def copy_move(src_path, dest_path):
     '''
     :param src_path 源文件
@@ -78,3 +79,66 @@ def get_doc_file(path):
             files.append(path + file)
     return files
 
+def read_vocab(vocab_path):
+    '''
+    读取词表内容
+    :param vocab_path: 词表路径
+    :return: 词表dic文件
+    '''
+    with open(vocab_path, 'rb') as f:
+        vocab = pickle.load(f)
+    return vocab
+
+def read_txt(txt_path):
+    '''
+    读取词表内容
+    :param vocab_path: 词表路径
+    :return: 词表dic文件
+    '''
+    with open(txt_path, 'r', encoding="utf-8") as f:
+        content = f.read()
+    return content
+
+def shuffle(txt, label):
+    length = len(txt)
+    index = [i for i in range(length)]
+    random.shuffle(index)
+    txt = [txt[i] for i in index]
+    label = [label[i] for i in index]
+    return txt, label
+
+def shuffle_(txt):
+    length = len(txt)
+    index = [i for i in range(length)]
+    random.shuffle(index)
+    txt = [txt[i] for i in index]
+    return txt
+
+def write_content(content, write_path):
+    with open(write_path, 'a', encoding='utf-8') as f:
+        f.write(content)
+
+def write_content_renew(content, write_path):
+    with open(write_path, 'w', encoding='utf-8') as f:
+        f.write(content)
+
+def concat_path(head_path):
+    paths = [os.path.join(head_path, path_name) for path_name in os.listdir(head_path)]
+    return paths
+
+def gain_filename_from_path(path, mode):
+    if mode == 'txt':
+        name = re.search("(\\d+)\\.txt", path).group(1)
+        return ("%s.txt"% name)
+
+def get_file_path(base_path):
+    '''将ann和txt文件分开；来获取路径列表
+    :param base_path (str) 基础路径（包括ann和txt的）
+    :return anns ann后缀的路径
+    :return txt txt后缀的路径'''
+    path_lists = os.listdir(base_path)
+    ann_files = names_filter(path_lists, ["ann"])
+    txt_files = names_filter(path_lists, ["txt"])
+    anns = [os.path.join(base_path, i) for i in ann_files]
+    txts = [os.path.join(base_path, i) for i in txt_files]
+    return anns, txts, txt_files
