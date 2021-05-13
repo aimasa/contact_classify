@@ -145,22 +145,17 @@ def check_title_head(title, head):
     return True
 
 
-def run(head_path, ann_path):
+def run(content, label):
     '''
 
     :param head_path:
     :param ann_path:
     :return:
     '''
-    label_path, content_path = read_path(head_path)
-    length = len(label_path)
-    for i in tqdm(range(length)):
-        id = re.search("(\\d+)\\.txt", content_path[i]).group(1)
-        label = read_label(label_path[i])
-        content = read_txt(content_path[i])
-        ann_info = ann_content(label, content)
-        write_ann_file(ann_info, os.path.join(check_utils.check_and_build(ann_path), ("%s.ann"% id)))
 
+    ann_info = ann_content(label, content)
+    # write_ann_file(ann_info, os.path.join(check_utils.check_and_build(ann_path), ("%s.ann"% 0)))
+    return ann_info
 
 def write_ann_file(ann_info, ann_path):
     for index, info in enumerate(ann_info):
@@ -179,8 +174,6 @@ def write_ann_file(ann_info, ann_path):
 
 
 
+
 if __name__ == '__main__':
     run("F:/contract", "F:/contract/ann")
-    # str = "A\nB\n"
-    # tmp = str.split("\n")
-    # print(tmp)

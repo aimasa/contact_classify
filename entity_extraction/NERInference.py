@@ -24,10 +24,8 @@ class NERInference:
         self.label_path = label_path
 
     def predict_all(self, is_eval):
-        if is_eval:
-            contents, lengths, labels, contents_txtlist = self.read_data(is_eval)
-        else:
-            contents, lengths, contents_txtlist = self.read_data()
+
+        contents, lengths, contents_txtlist = self.read_data()
         result = []
         result_ix = []
         length = len(contents)
@@ -38,8 +36,6 @@ class NERInference:
             print(tag_result)
             result.append(tag_result)
             result_ix.append(ix_result)
-        if is_eval:
-            return result, result_ix, labels
         return result, result_ix
 
     def predict(self, content, length):
@@ -61,48 +57,24 @@ class NERInference:
     def read_data(self, is_evl=False):
         # labels_to_ix = NER_pre_data.build_label(normal_param.labels)
         # vocab = normal_util.read_vocab(normal_param.lstm_vocab)
-        if is_evl is False:
-            contents, lengths, contents_txtlist = read_single_data(self.path, self.word2idx,
-                                                                   length=normal_param.max_length, mode=self.mode)
+        contents, lengths, contents_txtlist = read_single_data(self.path, self.word2idx,
+                                                               length=normal_param.max_length, mode=self.mode)
 
-            return contents, lengths, contents_txtlist
-        else:
-            contents, lengths, labels, contents_txtlist = read_single_data(self.path, self.word2idx,
-                                                                           length=normal_param.max_length,
-                                                                           mode=self.mode, is_evl=is_evl,
-                                                                           label_path=self.label_path,
-                                                                           label_to_index=self.tags)
-
-            return contents, lengths, labels, contents_txtlist
+        return contents, lengths, contents_txtlist
 
 
-def read_single_data(path, vocab, length, mode="bilstm", is_evl=False, label_path=None, label_to_index=None):
+
+def read_single_data(contents, vocab, length, mode="bilstm", is_evl=False, label_path=None, label_to_index=None):
     txt_array = []
     lengths = []
     labels_array = []
-    if is_evl:
-        contents = NER_pre_data.read_content(path, mode="txt")
-        labels = NER_pre_data.read_content(label_path)
 
-        for tmp in contents:
-            content, max_length = data_change.auto_single_test_pad(tmp, vocab, length, mode=mode)
-            txt_array.append(content)
-            lengths.append(max_length)
-        for label in labels:
-            # label_array = data_change.auto_single_test_pad(label, label_to_index, length, is_label=True, mode=mode)
-            # labels_array.append(label_array)
-            labels_array.append(label)
-        return txt_array, lengths, labels_array, contents
-
-    else:
-        contents = NER_pre_data.read_content(path, mode="txt")
-
-        for tmp in tqdm.tqdm(contents):
-            # print(tmp)
-            content, max_length = data_change.auto_single_test_pad(tmp, vocab, length, mode=mode)
-            txt_array.append(content)
-            lengths.append(max_length)
-        return txt_array, lengths, contents
+    for tmp in tqdm.tqdm(contents):
+        # print(tmp)
+        content, max_length = data_change.auto_single_test_pad(tmp, vocab, length, mode=mode)
+        txt_array.append(content)
+        lengths.append(max_length)
+    return txt_array, lengths, contents
 
 
 def txtpad_use_bert(txt_list, length):
