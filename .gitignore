@@ -3,3 +3,6 @@ contact_classify/cache/
 contact_classify/runs/
 .txt
 test_script/cache/
+bert/
+entity_extraction/checkpoints
+relation_extraction/tmp

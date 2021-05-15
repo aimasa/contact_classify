@@ -1,13 +1,13 @@
 from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
-from relation_contract import eval
+from relation_extraction import eval
 import os
 from model import modeling
-from relation_contract.pre import tokenization
+from relation_extraction.pre import tokenization
 import tensorflow as tf
-from relation_contract.bert_EL_muti_nobilstm import SemEvalProcessor
-from relation_contract import bert_EL_muti_nobilstm
+from relation_extraction.bert_EL_muti_nobilstm import SemEvalProcessor
+from relation_extraction import bert_EL_muti_nobilstm
 from utils import normal_util
 flags = tf.flags
 FLAGS = flags.FLAGS
@@ -137,6 +137,7 @@ def bert_EL_muti():
     list_dic = []
     last_txt_no = 0
     paths = []
+    all_list_dic = []
     for prediction, example in zip(result, predict_examples):
         paths.append(example.path)
         results = evaluator.precision(prediction)
@@ -144,6 +145,7 @@ def bert_EL_muti():
         if last_txt_no is not example.entity_T:
             last_txt_no = example.entity_T
             num_no = 0
+            all_list_dic += list_dic
             write_ann(list_dic, paths[len(paths) - 2])
             list_dic = []
         index = example.entity_T
@@ -157,6 +159,11 @@ def bert_EL_muti():
             list_dic.append(dic)
             num_no += 1
     write_ann(list_dic, paths[len(paths) - 2])
+    all_list_dic += list_dic
+
+
+
+
 
 
 def write_ann(list_dic, path):

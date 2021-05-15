@@ -3,7 +3,7 @@ from utils import normal_util, check_utils
 import os
 from tqdm import tqdm
 from pro_data import eval_prodata as eval
-os.environ["CUDA_VISIBLE_DEVICES"]="-1"
+# os.environ["CUDA_VISIBLE_DEVICES"]="-1"
 from sklearn.metrics import classification_report
 def clean_txt(txts):
     '''
@@ -22,7 +22,7 @@ def clean_txt(txts):
 
 
 
-def gen_label(path, write_path):
+def gen_label(path):
     labels = prediction_entity.prediction(path)
     txt_label = []
     for index, label in enumerate(labels):
@@ -30,14 +30,14 @@ def gen_label(path, write_path):
     return txt_label
 
 
-def run(head_path, write_path):
+def run(head_path):
     pro = eval.process_data()
 
-    content = pro.load_data_docx(head_path)
-    content = clean_txt(content)
-    corr_write_path = os.path.join(check_utils.check_and_build(write_path), "label.txt")
-    txt_label = gen_label(content, corr_write_path)
-    return content, txt_label
+    content = pro.load_data_docx(head_path, need_tab = True)
+    # content = clean_txt(content[0])
+    # corr_write_path = os.path.join(check_utils.check_and_build(write_path), "label.txt")
+    txt_label = gen_label(content)
+    return "\n".join(content), "\n".join(txt_label)
 
 def pre_score(head_path):
 

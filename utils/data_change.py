@@ -1,7 +1,7 @@
 import torch
 import numpy as np
 from keras.preprocessing.sequence import pad_sequences
-from entity_contract import normal_param
+from entity_extraction import normal_param
 from keras_bert import Tokenizer,load_trained_model_from_checkpoint
 from keras.preprocessing import sequence
 

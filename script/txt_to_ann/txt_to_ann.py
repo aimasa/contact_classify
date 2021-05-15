@@ -3,13 +3,15 @@ import os
 from entity_extraction import normal_param
 import re
 from tqdm import tqdm
-def read_txt(path):
+
+
+def read_txt(content):
     '''
     读取path中的txt文档，并返回文档的list表list<>
     :param path: 文档的路径
     :return: 文档内容的list表
     '''
-    content = normal_util.read_txt(path)
+    # content = normal_util.read_txt(path)
     content = content.replace("\r\n", "\n")
     content = content.replace("\n", "\r\n")
     content_by_char = []
@@ -17,13 +19,14 @@ def read_txt(path):
         content_by_char.append(i)
     return content_by_char
 
-def read_label(path):
+
+def read_label(labels):
     '''
     读取path中的label文档，并返回文档中的label的list表list<>
     :param path: label的path
     :return: label的list表
     '''
-    labels = normal_util.read_txt(path)
+    # labels = normal_util.read_txt(path)
     labels = labels.replace("\r\n", "\n")
     labels = labels.replace("\n", "\r\n")
     labels = labels.split(" ")
@@ -32,7 +35,7 @@ def read_label(path):
         tmp = i.split("\r\n")
         if len(tmp) > 1:
             for i in range(len(tmp)):
-                if tmp[i] == "" :
+                if tmp[i] == "":
                     label_by_char.append("\r")
                     label_by_char.append("\n")
                     continue
@@ -43,6 +46,7 @@ def read_label(path):
         else:
             label_by_char.append(tmp[0])
     return label_by_char
+
 
 def read_path(head_path):
     '''
@@ -81,14 +85,13 @@ def ann_content(label, content):
         i = end
         if tag is None:
             continue
-        head = ("%s%s"%("T", index))
-        str_index = ("%s %s %s"% (tag, start, end))
+        head = ("%s%s" % ("T", index))
+        str_index = ("%s %s %s" % (tag, start, end))
         str_content = content_parse(content, start, end)
         index = index + 1
         ann = [head, str_index, str_content]
         anns.append(ann)
     return anns
-
 
 
 def content_parse(content, start, end):
@@ -103,6 +106,7 @@ def content_parse(content, start, end):
     for i in range(start, end):
         content_ = content_ + content[i]
     return content_
+
 
 def label_parse(label, start):
     '''
@@ -119,7 +123,7 @@ def label_parse(label, start):
         head = ["B-", "E-", "S-"]
         while end < len(label) and (check_title_head(label[end], head) and label[end] != "O" and label[end] != "\r"):
             end = end + 1
-        if  end < len(label) and label[end].startswith("E-"):
+        if end < len(label) and label[end].startswith("E-"):
             end = end + 1
     elif label[start].startswith("S-"):
         end = start + 1
@@ -145,34 +149,42 @@ def check_title_head(title, head):
     return True
 
 
-def run(content, label):
+def run(content, label, num):
     '''
 
     :param head_path:
     :param ann_path:
     :return:
     '''
+    label = read_label(label)
+    content1 = read_txt(content)
+    ann_info = ann_content(label, content1)
 
-    ann_info = ann_content(label, content)
-    # write_ann_file(ann_info, os.path.join(check_utils.check_and_build(ann_path), ("%s.ann"% 0)))
+    write_ann_file(ann_info, check_exist_and_remove(
+        os.path.join(check_utils.check_and_build(os.path.join("D:/data/test/test", "prediction")), ("%s.ann" % num))))
+    write_content_file(content, check_exist_and_remove(
+        os.path.join(check_utils.check_and_build(os.path.join("D:/data/test/test", "prediction")), ("%s.txt" % num))))
     return ann_info
+
+
+def check_exist_and_remove(path):
+    if os.path.exists(path):
+        os.remove(path)
+    return path
+
 
 def write_ann_file(ann_info, ann_path):
     for index, info in enumerate(ann_info):
-        str = ("%s\t%s\t%s"%(info[0], info[1], info[2]))
+        str = ("%s\t%s\t%s" % (info[0], info[1], info[2]))
         with open(ann_path, "a", encoding="utf-8") as f:
             f.write(str)
             if index < len(ann_info) - 1:
                 f.write("\n")
 
 
-
-
-
-
-
-
-
+def write_content_file(content_info, content_path):
+    with open(content_path, "a", encoding="utf-8") as f:
+        f.write(content_info)
 
 
 if __name__ == '__main__':

@@ -107,7 +107,7 @@ class process_data(object):
             content_and_label = [content, label]
         return content_and_label
 
-    def load_data_docx(self, text_path, label=None, is_word_split=False):
+    def load_data_docx(self, text_path, label=None, need_tab=False):
         '''根据输入的文件路径以及文件对应的label，载入数据，输出label以及文件内容'''
         content_and_label = []
         # with open(text_path, "rb") as f:
@@ -132,6 +132,17 @@ class process_data(object):
 
 
         document_content = ""
+        if need_tab:
+            contents = []
+            for content_para in document.paragraphs:
+                content = content_para.text
+                if check_utils.check_useless_seq(content):
+                    continue
+                # document_content = self.clear_stop_word(content)
+                document_content = self.clean_data(content)
+                contents.append(document_content)
+            # return "\n".join(contents)
+            return contents
         for content_para in document.paragraphs:
             content = content_para.text
             if check_utils.check_useless_seq(content):

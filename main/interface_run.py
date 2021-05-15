@@ -3,6 +3,8 @@ from flask import Flask,render_template,request,jsonify,url_for
 from contact_classify import pre_classfiy
 from entity_extraction import pre_entity
 from script.txt_to_ann import txt_to_ann
+from relation_extraction import prediction_relation
+from entity_extraction import prediction_entity
 app = Flask(__name__)
 CORS(app)
 
@@ -20,27 +22,31 @@ def classify():
 
 @app.route('/contact/entity', methods = ["POST"])
 def entity_extract():
+    num = request.args.get("num")
     path = request.files['path']
-    content, txt_label = pre_entity.run(path, path)
-    ann_info = txt_to_ann.run(content, txt_label)
-
-
+    content, txt_label = pre_entity.run(path)
+    ann_info = txt_to_ann.run(content, txt_label, num)
+    # prediction_relation.bert_EL_muti()
     return {
         "ann_info" : ann_info,
         "content" : content
     }
 
-@app.route('/contact/relation', methods = ["POST"])
+@app.route('/contact/relation', methods = ["GET"])
 def relation_extract():
-    path = request.files['path']
-    content, txt_label = pre_entity.run(path, path)
-    ann_info = txt_to_ann.run(content, txt_label)
-
 
     return {
-        "ann_info" : ann_info,
-        "content" : content
+        "return" : True
     }
+
+    # content, txt_label = pre_entity.run(path, path)
+    # ann_info = txt_to_ann.run(content, txt_label)
+
+
+    # return {
+    #     "ann_info" : ann_info,
+    #     "content" : content
+    # }
 
 
 

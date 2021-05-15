@@ -1,6 +1,6 @@
 import torch
 import torch.nn as nn
-from entity_contract import normal_param
+from entity_extraction import normal_param
 
 STOP_TAG = normal_param.STOP_TAG
 START_TAG = normal_param.START_TAG

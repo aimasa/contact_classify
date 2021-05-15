@@ -11,7 +11,7 @@ from keras_contrib.utils import save_load_utils
 import keras.backend as K
 from keras.optimizers import Adam
 from sklearn.metrics import precision_recall_fscore_support as score
-from entity_contract import normal_param
+# from entity_contract import normal_param
 EMBEDDING_OUT_DIM = 128
 HIDDEN_UNITS = 200
 DROPOUT_RATE = 0.2

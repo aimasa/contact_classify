@@ -1,3 +1,4 @@
+import os
 START_TAG = "[CLS]"
 STOP_TAG = "[SEP]"
 tag_dic = {
@@ -83,8 +84,8 @@ EPOCH = 14
 save_path_bilstm = 'checkpoints/bilstm_crf.h5py'
 # save_path_bilstm = 'checkpoints/bilstm_crf_liuxiao.h5py'
 save_path_gru = 'checkpoints/gru_crf.h5py'
-save_path_bert_bilstm = 'checkpoints/bert_bilstm_crf.h5py'
-save_path_bert_wwm_bilstm = 'checkpoints/bert_bilstm_crf1.h5py'
+save_path_bert_bilstm = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'checkpoints/bert_bilstm_crf.h5py')
+save_path_bert_wwm_bilstm = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'checkpoints/bert_bilstm_crf1.h5py')
 # save_path_bert_bilstm = 'checkpoints/bert_bilstm_crf_liuxiao.h5py'
 save_path_wordVEC_bilstm = 'checkpoints/wordvec_bilstm_crf.h5py'
 save_path_lstm = 'checkpoints/lstm_crf.h5py'
@@ -103,8 +104,8 @@ dict_path = 'E:\\chinese_wwm_ext_L-12_H-768_A-12\\vocab.txt'
 # test_file = './data/test.txt'
 # max_length = 248
 max_length = 238
-vocab = 'bert/vocab.txt'
-lstm_vocab = 'vocab.pkl'
+vocab = os.path.join(os.path.abspath(os.path.dirname(os.getcwd())),  'bert/vocab.txt')
+lstm_vocab = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'vocab.pkl')
 use_cuda = True
 gpu = 0
 batch_size = 4
