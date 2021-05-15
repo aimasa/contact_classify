@@ -149,7 +149,7 @@ def check_title_head(title, head):
     return True
 
 
-def run(content, label, num):
+def run(content, label):
     '''
 
     :param head_path:

@@ -25,7 +25,7 @@ def entity_extract():
     # num = request.args.get("num")
     path = request.files['path']
     content, txt_label = pre_entity.run(path)
-    ann_info = txt_to_ann.run(content, txt_label, num)
+    ann_info = txt_to_ann.run(content, txt_label)
     # prediction_relation.bert_EL_muti()
     return {
         "ann_info" : ann_info,
