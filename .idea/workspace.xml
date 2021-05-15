@@ -2,29 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dffdc1a1-2ce4-4385-951a-d409a3da9988" name="Default Changelist" comment="1、添加对CNN分类训练的描述&#10;2、对读取文件信息做了容错处理">
-      <change afterPath="$PROJECT_DIR$/entity_extraction/vocab.pkl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/relation_extraction/HeadSelectionScores_noBilstm.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/relation_extraction/ann_to_example.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/relation_extraction/bert_EL_muti_nobilstm.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/relation_extraction/eval.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/relation_extraction/pre/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/relation_extraction/pre/bert_normal.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/relation_extraction/pre/optimization.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/relation_extraction/pre/tokenization.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/relation_extraction/score_utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/relation_extraction/txt_segmented.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entity_extraction/normal_param.py" beforeDir="false" afterPath="$PROJECT_DIR$/entity_extraction/normal_param.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entity_extraction/pre_entity.py" beforeDir="false" afterPath="$PROJECT_DIR$/entity_extraction/pre_entity.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/interface_run.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/interface_run.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/LSTM_CRF.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/LSTM_CRF.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/keras_BILSTM_CEF.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/keras_BILSTM_CEF.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/keras_word2vec_bilstm_crf.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/keras_word2vec_bilstm_crf.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro_data/eval_prodata.py" beforeDir="false" afterPath="$PROJECT_DIR$/pro_data/eval_prodata.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/relation_extraction/prediction_relation.py" beforeDir="false" afterPath="$PROJECT_DIR$/relation_extraction/prediction_relation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/tmp/bertEL_no/predict.tf_record" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/script/txt_to_ann/txt_to_ann.py" beforeDir="false" afterPath="$PROJECT_DIR$/script/txt_to_ann/txt_to_ann.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/data_change.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/data_change.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,8 +32,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/interface_run.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="26" column="36" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
+            <state relative-caret-position="253">
+              <caret line="27" column="27" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
               <folding>
                 <element signature="e#0#27#0" expanded="true" />
               </folding>
@@ -60,11 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/entity_extraction/pre_entity.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="203">
-              <caret line="35" column="29" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
+              <caret line="35" column="49" selection-start-line="35" selection-start-column="49" selection-end-line="35" selection-end-column="49" />
               <folding>
                 <element signature="e#0#98#0" expanded="true" />
               </folding>
@@ -73,10 +54,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pro_data/eval_prodata.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="353">
-              <caret line="48" column="38" lean-forward="true" selection-start-line="48" selection-start-column="38" selection-end-line="48" selection-end-column="38" />
+              <caret line="48" column="38" selection-start-line="48" selection-start-column="38" selection-end-line="48" selection-end-column="38" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -93,9 +83,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/entity_extraction/prediction_entity.py">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+              <folding>
+                <element signature="e#0#94#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -105,6 +102,18 @@
               <caret line="146" column="5" selection-start-line="146" selection-start-column="5" selection-end-line="146" selection-end-column="5" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/script/txt_to_ann/txt_to_ann.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="160" column="43" selection-start-line="160" selection-start-column="43" selection-end-line="160" selection-end-column="43" />
+              <folding>
+                <element signature="e#0#42#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -185,10 +194,8 @@
         <option value="$PROJECT_DIR$/contact_classify/train.py" />
         <option value="$PROJECT_DIR$/test_script/test.py" />
         <option value="$PROJECT_DIR$/contact_classify/evaluation.py" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/contact_classify/runs/run_11/checkpoint/checkpoint" />
         <option value="$PROJECT_DIR$/test_script/test_classfiy.py" />
-        <option value="$PROJECT_DIR$/entity_extraction/prediction_entity.py" />
         <option value="$PROJECT_DIR$/entity_extraction/process_data_for_keras.py" />
         <option value="$PROJECT_DIR$/entity_extraction/NER_pre_data.py" />
         <option value="$PROJECT_DIR$/entity_extraction/batch_label_to_ann.py" />
@@ -205,15 +212,17 @@
         <option value="$PROJECT_DIR$/pro_data/eval_prodata.py" />
         <option value="$PROJECT_DIR$/relation_extraction/bert_EL_muti_nobilstm.py" />
         <option value="$PROJECT_DIR$/entity_extraction/pre_entity.py" />
-        <option value="$PROJECT_DIR$/script/txt_to_ann/txt_to_ann.py" />
         <option value="$PROJECT_DIR$/relation_extraction/tmp/bertEL_no/checkpoint" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/relation_extraction/prediction_relation.py" />
         <option value="$PROJECT_DIR$/main/interface_run.py" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/script/txt_to_ann/txt_to_ann.py" />
+        <option value="$PROJECT_DIR$/entity_extraction/prediction_entity.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1616" />
@@ -545,7 +554,7 @@
       <workItem from="1619251928327" duration="1329000" />
       <workItem from="1620823898784" duration="6383000" />
       <workItem from="1620873861264" duration="31445000" />
-      <workItem from="1620998035612" duration="9721000" />
+      <workItem from="1620998035612" duration="10057000" />
     </task>
     <task id="LOCAL-00001" summary="1、添加对CNN分类训练的描述&#10;2、对读取文件信息做了容错处理">
       <created>1584520442931</created>
@@ -558,7 +567,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="676627000" />
+    <option name="totallyTimeSpent" value="676963000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -570,7 +579,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="7" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4988864" visible="true" weight="0.20051414" />
       <window_info id="Structure" order="1" sideWeight="0.5011136" side_tool="true" weight="0.19189766" />
@@ -578,7 +588,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32729805" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.37325907" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39275765" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.39275765" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3286908" />
@@ -814,13 +824,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="15" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/contact_classify/train.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -1044,16 +1047,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/script/txt_to_ann/txt_to_ann.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-97">
-          <caret line="166" column="19" selection-start-line="166" selection-start-column="19" selection-end-line="166" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/entity_extraction/normal_param.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-53">
@@ -1122,23 +1115,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/entity_extraction/prediction_entity.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/interface_run.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="26" column="36" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pro_data/eval_prodata.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="353">
-          <caret line="48" column="38" lean-forward="true" selection-start-line="48" selection-start-column="38" selection-end-line="48" selection-end-column="38" />
+          <caret line="48" column="38" selection-start-line="48" selection-start-column="38" selection-end-line="48" selection-end-column="38" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
@@ -1148,9 +1128,46 @@
     <entry file="file://$PROJECT_DIR$/entity_extraction/pre_entity.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
-          <caret line="35" column="29" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
+          <caret line="35" column="49" selection-start-line="35" selection-start-column="49" selection-end-line="35" selection-end-column="49" />
           <folding>
             <element signature="e#0#98#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/interface_run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="27" column="27" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script/txt_to_ann/txt_to_ann.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="160" column="43" selection-start-line="160" selection-start-column="43" selection-end-line="160" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/entity_extraction/prediction_entity.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+          <folding>
+            <element signature="e#0#94#0" expanded="true" />
           </folding>
         </state>
       </provider>

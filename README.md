@@ -14,5 +14,8 @@
 通过flask将分类模型封装成接口形式以供调用
 
 - 使用分类模型：CNN
-- 可调用模型分类接口所在文件：test_script/test_classify.py
+- 可调用模型分类接口所在文件：main/interface_run.py
+
+- 使用实体识别模型：Bert-Bilstm
+- 可调用模型分类接口所在文件：main/interface_run.py
 

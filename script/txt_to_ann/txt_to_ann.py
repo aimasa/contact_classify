@@ -160,10 +160,10 @@ def run(content, label, num):
     content1 = read_txt(content)
     ann_info = ann_content(label, content1)
 
-    write_ann_file(ann_info, check_exist_and_remove(
-        os.path.join(check_utils.check_and_build(os.path.join("D:/data/test/test", "prediction")), ("%s.ann" % num))))
-    write_content_file(content, check_exist_and_remove(
-        os.path.join(check_utils.check_and_build(os.path.join("D:/data/test/test", "prediction")), ("%s.txt" % num))))
+    # write_ann_file(ann_info, check_exist_and_remove(
+    #     os.path.join(check_utils.check_and_build(os.path.join("D:/data/test/test", "prediction")), ("%s.ann" % num))))
+    # write_content_file(content, check_exist_and_remove(
+    #     os.path.join(check_utils.check_and_build(os.path.join("D:/data/test/test", "prediction")), ("%s.txt" % num))))
     return ann_info
 
 
