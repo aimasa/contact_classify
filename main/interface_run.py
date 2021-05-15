@@ -22,7 +22,7 @@ def classify():
 
 @app.route('/contact/entity', methods = ["POST"])
 def entity_extract():
-    num = request.args.get("num")
+    # num = request.args.get("num")
     path = request.files['path']
     content, txt_label = pre_entity.run(path)
     ann_info = txt_to_ann.run(content, txt_label, num)
